@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portail employés - Paleto Garage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <div class="brand">
+        <span class="brand-logo" aria-hidden="true">🔧</span>
+        <span class="brand-name">Paleto Garage</span>
+      </div>
+
+      <button class="nav-toggle" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav">
+        <a href="index.html#hero" class="nav-link">Accueil</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#rdv" class="nav-link">Rendez-vous</a>
+        <a href="index.html#tarifs" class="nav-link">Tarifs</a>
+        <a href="index.html#equipe" class="nav-link">Équipe</a>
+        <a href="recrutement.html" class="nav-link">Recrutement</a>
+        <a href="evenements.html" class="nav-link">Événements</a>
+        <a href="employes.html" class="nav-link active">Portail Employés</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="shell">
+
+        <h1>Portail employés</h1>
+        <p class="page-sub">
+          Zone interne réservée aux employés du Paleto Garage.<br />
+          Entrez le code d’accès pour consulter les informations internes
+          et envoyer une demande de congé.
+        </p>
+        <div class="card" id="login-card">
+          <h2>Connexion employés</h2>
+          <p class="page-sub">
+            Entre le code transmis par la direction pour accéder au portail interne.
+          </p>
+
+          <label>
+            Code d'accès
+            <input
+              type="password"
+              id="employee-code"
+              placeholder="Entrer le code ici"
+            />
+          </label>
+
+          <button class="btn btn-primary full" id="employee-login-btn">
+            Valider
+          </button>
+
+          <p id="employee-login-msg" class="form-message"></p>
+        </div>
+
+        <div id="employee-zone" style="display:none; margin-top:18px;">
+
+          <div class="grid grid-2">
+
+            <article class="card">
+              <h2>Employé de la semaine</h2>
+              <p class="page-sub">
+                Mise en valeur de la personne qui s’est le plus démarquée au garage.
+              </p>
+
+              <div class="employee-month">
+                <div>
+                  <p class="employee-name">Aucun employé sélectionné pour l'instant</p>
+                </div>
+              </div>
+
+              <p class="employee-note">
+                Le titre d’employé de la semaine est attribué en fonction du chiffre
+                d’affaires et de l’attitude globale au garage.
+              </p>
+            </article>
+
+            <article class="card">
+              <h2>Calendrier</h2>
+              <p class="page-sub">
+                Calendrier interne des activités importantes pour le Paleto Garage.
+              </p>
+
+              <ul class="calendar-list">
+                <li>
+                  <div class="calendar-date">
+                    <span class="calendar-day">17</span>
+                    <span class="calendar-month">NOV</span>
+                  </div>
+                  <div class="calendar-content">
+                    <p class="calendar-title">Meeting employés</p>
+                    <p class="calendar-meta">21h00 au garage, présence conseillée.</p>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="calendar-date">
+                    <span class="calendar-day">18</span>
+                    <span class="calendar-month">NOV</span>
+                  </div>
+                  <div class="calendar-content">
+                    <p class="calendar-title">Formation interne</p>
+                    <p class="calendar-meta">Animée par la direction pour les Apprenti</p>
+                  </div>
+                </li>
+              </ul>
+            </article>
+
+          </div>
+
+          <article class="card" style="margin-top:18px;">
+            <h2>Guides rapides</h2>
+            <p class="page-sub">
+              Rappels importants pour garder une bonne qualité de service.
+            </p>
+
+            <ul class="guide-list">
+              <li>
+                <h4>1. Ouverture / fermeture du garage</h4>
+                <p>
+                  Toujours annoncer en ville l’ouverture/fermeture quand vous êtes le premier/dernier en service.
+                </p>
+              </li>
+              <li>
+                <h4>2. Facturation du client</h4>
+                <p>
+                  Facturer le client avec le menu F6. Toujours expliquer les coûts au client avant de lui facturer le service.
+                </p>
+              </li>
+              <li>
+                <h4>3. Tenue vestimentaire</h4>
+                <p>
+                  Porter la tenue de travail fournie par le garage durant les heures de service.
+                </p>
+              </li>
+              <li>
+                <h4>4. Fiche de paie</h4>
+                <p>
+                  Ce guide explique comment consigner correctement vos actions afin d’assurer un traitement rapide et précis de votre paie.
+                </p>
+
+                <strong>Étape 1: Enregistrement d’un service</strong>
+                <p>Pour chaque service effectué en jeu :</p>
+                <ul>
+                  <li>Sélectionnez votre nom dans la liste déroulante « Employé ».</li>
+                  <li>Choisissez le type de service (réparation, nettoyage, customisation, dépannage, etc.).</li>
+                  <li>Vérifiez ou saisissez le montant facturé au client.</li>
+                  <li>Cliquez sur « Ajouter à la semaine » pour enregistrer l’action.</li>
+                </ul>
+                <p>Chaque ajout met automatiquement à jour les totaux de la semaine en cours.</p>
+
+                <strong>Étape 2: Fin de semaine</strong>
+                <p>Chaque dimanche, avant 00 h :</p>
+                <ul>
+                  <li>Cliquez sur « Exporter vers Discord » pour envoyer votre récapitulatif hebdomadaire.</li>
+                  <li>Cliquez sur « Vider la semaine » si vous souhaitez repartir à zéro (facultatif : la fiche se réinitialise automatiquement lors du changement de semaine).</li>
+                </ul>
+
+                <strong>Important</strong>
+                <p>
+                  L’export Discord doit être effectué avant minuit chaque dimanche.<br />
+                  Aucun export = aucune paie pour la semaine correspondante.
+                </p>
+
+                <strong>Paiement</strong>
+                <p>
+                  Le virement de votre paie est effectué par le responsable des finances, selon le cycle de paie en vigueur.
+                </p>
+              </li>
+            </ul>
+          </article>
+
+          <div class="card" style="margin-top:18px;">
+            <h2>Fiche Paleto Garage (fiche de paie)</h2>
+            <p class="page-sub">
+              Utilise la fiche pour chaque service effectué au garage.
+            </p>
+
+            <div id="fiche-root">
+              <div class="grid" style="margin-top:16px">
+
+                <section class="card">
+                  <div class="body">
+                    <h2>Ajouter une action</h2>
+
+                    <div class="row">
+                      <div>
+                        <label>Employé</label>
+                        <select id="employeeSelect"></select>
+                        <div id="employeeGradeText" class="hint">Grade: —</div>
+                      </div>
+                      <div>
+                        <label>Date</label>
+                        <input type="date" id="dateInput" />
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div>
+                        <label>Type de service</label>
+                        <select id="serviceType">
+                          <option value="rep">Réparation</option>
+                          <option value="cus">Customisation</option>
+                          <option value="net">Nettoyage</option>
+                          <option value="rep_dist">Réparation à distance</option>
+                          <option value="kit">Vente kit de réparation</option>
+                          <option value="other">Autre</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label>Montant du service</label>
+                        <input type="number" id="serviceAmount" min="0" step="1" value="500" />
+                      </div>
+                    </div>
+
+                    <div class="row" id="distanceRow" style="display:none">
+                      <div>
+                        <label>Distance (km)</label>
+                        <input type="number" id="distanceKm" min="0" step="1" value="0" />
+                      </div>
+                    </div>
+
+                    <div class="row" id="kitsRow" style="display:none">
+                      <div>
+                        <label>Nombre de kits</label>
+                        <input type="number" id="kitsCount" min="0" step="1" value="0" />
+                      </div>
+                    </div>
+
+                    <div class="row row-bottom">
+                      <div class="col-half">
+                        <label>Total profit</label>
+                        <input id="totalToPayInput" disabled />
+                      </div>
+
+                      <div class="col-half">
+                        <label>&nbsp;</label>
+                        <div class="row row-inline" id="discountRowInline">
+                          <div class="discount-col" id="discountCol">
+                            <label class="discount-toggle">
+                              <input type="checkbox" id="halfPriceCheckbox" />
+                              <span>50% Réduction (service d'urgence)</span>
+                            </label>
+                          </div>
+
+                          <div class="actions actions--with-btn">
+                            <button class="btn btn-primary" id="addToWeekButton">
+                              Ajouter à la semaine
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="card">
+                  <div class="body body-week">
+                    <h2>Semaine en cours</h2>
+
+                    <div class="week-meta">
+                      <span class="pill" id="weekKeyText">—</span>
+                      <span class="muted" id="weekRangeText">—</span>
+                    </div>
+
+                    <div class="week-stats">
+                      <div class="stat">
+                        <span class="stat-value" id="weekTotalAmount">0,00 $</span>
+                        <small>Total à payer</small>
+                      </div>
+                      <div class="stat">
+                        <span class="stat-value" id="weekActionsCount">0</span>
+                        <small>Actions</small>
+                      </div>
+                      <div class="stat">
+                        <span class="stat-value" id="weekRepairsCount">0</span>
+                        <small>Réparations</small>
+                      </div>
+                      <div class="stat">
+                        <span class="stat-value" id="weekCustomsCount">0</span>
+                        <small>Customisations</small>
+                      </div>
+                    </div>
+
+                    <div class="actions right">
+                      <button class="btn btn-ghost" id="exportDiscordButton">Exporter vers Discord</button>
+                      <button class="btn btn-danger" id="clearWeekButton">Vider la semaine</button>
+                    </div>
+                  </div>
+                </section>
+
+              </div>
+
+              <section class="card" style="margin-top:18px">
+                <div class="body">
+                  <h2 style="margin:0 0 12px">Liste des actions</h2>
+
+                  <div class="search-bar">
+                    <label>Rechercher</label>
+                    <div class="search-input-wrap">
+                      <input id="searchInput" placeholder="nom, type…" />
+                      <span id="weekFilterText" class="filter-pill">Aucun filtre</span>
+                    </div>
+                  </div>
+
+                  <div class="table-wrap">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Date</th>
+                          <th>Employé</th>
+                          <th>Grade</th>
+                          <th>Service</th>
+                          <th>Valeur ($)</th>
+                          <th>Pourcentage</th>
+                          <th>Revenu ($)</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody id="actionsTableBody"></tbody>
+                    </table>
+                  </div>
+
+                  <div class="pager">
+                    <button class="btn btn-ghost" id="prevPageBtn" aria-label="Page précédente">◀</button>
+                    <div class="pill" id="pageInfoText">Page 0/1</div>
+                    <button class="btn btn-ghost" id="nextPageBtn" aria-label="Page suivante">▶</button>
+
+                    <div class="spacer"></div>
+
+                    <label class="pill" style="background:transparent;border:none;padding:0">
+                      Taille
+                      <select id="pageSizeSelect" style="margin-left:8px">
+                        <option value="10">10</option>
+                        <option value="20" selected>20</option>
+                        <option value="50">50</option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+              </section>
+
+              <div class="foot">
+                « <strong>Le détail fait la différence</strong>, surtout quand tout roule. »
+              </div>
+            </div> 
+          </div>
+
+          <div class="card form-card" style="margin-top:26px;">
+            <h2>Demande de congé</h2>
+            <p class="page-sub">
+              Remplis ce formulaire pour soumettre une demande de congé à la direction.<br />
+            </p>
+
+            <form id="form-conge">
+              <label>
+                Nom & prénom RP *
+                <input type="text" name="nom_rp" required placeholder="Ex : Kendrick Lamar" />
+              </label>
+
+              <label>
+                Poste / rôle au garage *
+                <input type="text" name="role" required placeholder="Ex : Mécano / Chef d'équipe" />
+              </label>
+
+              <div class="grid grid-2">
+                <label>
+                  Date de début *
+                  <input type="date" name="date_debut" required />
+                </label>
+                <label>
+                  Date de fin *
+                  <input type="date" name="date_fin" required />
+                </label>
+              </div>
+
+              <label>
+                Motif du congé *
+                <input type="text" name="motif" required placeholder="Ex : vacances, études, travail." />
+              </label>
+
+              <label>
+                Détails supplémentaires
+                <textarea name="details" rows="4" placeholder="Infos supplémentaires, précisions sur les horaires, etc."></textarea>
+              </label>
+
+              <button type="submit" class="btn btn-primary full">
+                Envoyer la demande de congé
+              </button>
+
+              <p id="conge-message" class="form-message"></p>
+            </form>
+          </div>
+
+        </div> 
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-shell">
+      <p class="footer-meta">
+        Espace interne Paleto Garage • Code à ne pas partager en dehors des employés
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
