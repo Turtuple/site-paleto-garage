@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       rdvMsg.textContent = "Envoi en cours…";
-      rdvMsg.style.color = "#b7a8ff";
+      rdvMsg.style.color = "#D99A1A";
 
       const formData = new FormData(rdvForm);
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         embeds: [
           {
             title: "Nouvelle demande de rendez-vous",
-            color: 0x4b39c7,
+            color: 0xD99A1A,
             fields: [
               { name: "Nom RP", value: nom, inline: false },
               { name: "Numéro de téléphone", value: telephone, inline: false },
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       recMsg.textContent = "Envoi en cours…";
-      recMsg.style.color = "#b7a8ff";
+      recMsg.style.color = "#D99A1A";
 
       const formData = new FormData(recForm);
 
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
         embeds: [
           {
             title: "Nouvelle candidature Paleto Garage",
-            color: 0x4b39c7,
+            color: 0xD99A1A,
             fields: [
               { name: "Pseudo Discord", value: discord, inline: false },
               { name: "Âge HRP", value: String(age_hrp), inline: true },
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       congeMsg.textContent = "Envoi en cours…";
-      congeMsg.style.color = "#b7a8ff";
+      congeMsg.style.color = "#D99A1A";
 
       const formData   = new FormData(congeForm);
       const nom_rp     = formData.get("nom_rp") || "—";
@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
         embeds: [
           {
             title: "Nouvelle demande de congé",
-            color: 0x4b39c7,
+            color: 0xD99A1A,
             fields: [
               { name: "Nom & prénom RP", value: nom_rp, inline: false },
               { name: "Poste / rôle", value: role, inline: false },
