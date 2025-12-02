@@ -84,6 +84,18 @@ h2 {
   font-size: 0.85rem;
 }
 
+.brand-logo-img {
+  height: 44px;   
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .brand-logo-img {
+    height: 34px;
+  }
+}
+
 .nav {
   display: flex;
   gap: 18px;
@@ -218,7 +230,7 @@ h2 {
 .hero-small {
   margin-top: 8px;
   font-size: 0.9rem;
-  color: #9d9faa;
+  color: #9d9faa
 }
 
 .card {
@@ -253,6 +265,10 @@ h2 {
 #services .card p {
   color: #c8c8d3;
   font-size: 0.95rem;
+}
+
+.accent-color-item {
+  color: #D99A1A;
 }
 
 .btn {
