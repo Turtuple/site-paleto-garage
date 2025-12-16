@@ -205,7 +205,7 @@ h2 {
 .hero-quote {
   margin-top: 8px;
   font-size: 0.95rem;
-  color: #D99A1A;
+  color: #9d9faa;
 }
 
 .hero-actions {
@@ -458,7 +458,7 @@ textarea {
 }
 
 .footer-quote {
-  color: #D99A1A;
+  color: #9d9faa;
   font-size: 0.9rem;
 }
 
@@ -890,3 +890,4 @@ textarea {
 ::-webkit-scrollbar-thumb:hover {
   background: #e1e1e1;
 }
+
